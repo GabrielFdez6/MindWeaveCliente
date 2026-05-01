@@ -59,6 +59,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Services\Abstractions\IAuthenticationService.cs" />
+    <Compile Include="Services\Implementations\AuthenticationService.cs" />
+    <Compile Include="Validators\CreateAccountValidator.cs" />
     <Compile Include="ViewModel\Authentication\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
     </Compile>
