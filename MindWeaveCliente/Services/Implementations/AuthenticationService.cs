@@ -15,6 +15,25 @@ namespace MindWeaveCliente.Services.Implementations
             return await executeServiceCallAsync(async (client) =>
                 await client.registerAsync(profile, password));
         }
+        }
+
+        public async Task<OperationResultDto> resendVerificationCodeAsync(string email)
+        {
+            return await executeServiceCallAsync(async (client) =>
+                await client.resendVerificationCodeAsync(email));
+        }
+
+        public async Task<OperationResultDto> sendPasswordRecoveryCodeAsync(string email)
+        {
+            return await executeServiceCallAsync(async (client) =>
+                await client.sendPasswordRecoveryCodeAsync(email));
+        }
+
+        public async Task<OperationResultDto> resetPasswordWithCodeAsync(string email, string code, string newPassword)
+        {
+            return await executeServiceCallAsync(async (client) =>
+                await client.resetPasswordWithCodeAsync(email, code, newPassword));
+        }
 
         private static async Task<T> executeServiceCallAsync<T>(Func<AuthenticationManagerClient, Task<T>> serviceCall)
         {
@@ -60,6 +79,23 @@ namespace MindWeaveCliente.Services.Implementations
             catch (TimeoutException)
             {
                 client.Abort();
+            }
+        }
+
+        private static void abortClientSafe(AuthenticationManagerClient client)
+        {
+            try
+            {
+                client.Abort();
+            }
+            catch
+            {
+                /*
+                 *Ignore: The goal is to try to release the resource.
+                 * If the proxy is already in a faulted or disconnected state,
+                 * Abort() might throw an exception that adds no value
+                 * and could interrupt the application's shutdown flow.
+                 */
             }
         }
 
