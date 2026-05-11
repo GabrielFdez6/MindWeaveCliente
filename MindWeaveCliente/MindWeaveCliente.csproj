@@ -61,11 +61,24 @@
     </Compile>
     <Compile Include="Services\Abstractions\IAuthenticationService.cs" />
     <Compile Include="Services\Implementations\AuthenticationService.cs" />
+    <Compile Include="Utilities\Abstractions\IDialogService.cs" />
+    <Compile Include="Utilities\Abstractions\INavigationService.cs" />
+    <Compile Include="Utilities\Abstractions\IServiceExceptionHandler.cs" />
+    <Compile Include="Utilities\Implementations\DialogService.cs" />
+    <Compile Include="Utilities\Implementations\NavigationService.cs" />
+    <Compile Include="Utilities\Implementations\ServiceExceptionHandler.cs" />
     <Compile Include="Validators\CreateAccountValidator.cs" />
+    <Compile Include="Validators\GuestJoinValidator.cs" />
+    <Compile Include="Validators\LoginValidator.cs" />
+    <Compile Include="Validators\PasswordRecoveryValidator.cs" />
+    <Compile Include="ViewModel\Authentication\GuestJoinViewModel.cs" />
     <Compile Include="ViewModel\Authentication\LoginVIewModel.cs" />
     <Compile Include="ViewModel\Authentication\PasswordRecoveryViewModel.cs" />
     <Compile Include="View\Authentication\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Authentication\GuestJoinPage.xaml.cs">
+      <DependentUpon>GuestJoinPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Authentication\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -103,6 +116,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\Authentication\CreateAccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Authentication\GuestJoinPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
