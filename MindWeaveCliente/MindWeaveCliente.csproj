@@ -62,10 +62,18 @@
     <Compile Include="Services\Abstractions\IAuthenticationService.cs" />
     <Compile Include="Services\Implementations\AuthenticationService.cs" />
     <Compile Include="Validators\CreateAccountValidator.cs" />
-    <Compile Include="ViewModel\Authentication\CreateAccountPage.xaml.cs">
+    <Compile Include="ViewModel\Authentication\LoginVIewModel.cs" />
+    <Compile Include="ViewModel\Authentication\PasswordRecoveryViewModel.cs" />
+    <Compile Include="View\Authentication\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Authentication\CreateAccountViewModel.cs" />
+    <Compile Include="View\Authentication\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Authentication\CreateAccountViewModel.cs" />
+    <Compile Include="View\Authentication\PasswordRecoveryPage.xaml.cs">
+      <DependentUpon>PasswordRecoveryPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -94,9 +102,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="ViewModel\Authentication\CreateAccountPage.xaml">
+    <Page Include="View\Authentication\CreateAccountPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Authentication\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Authentication\PasswordRecoveryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
