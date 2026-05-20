@@ -60,7 +60,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Services\Abstractions\IAuthenticationService.cs" />
+    <Compile Include="Services\Abstractions\IInvitationService.cs" />
+    <Compile Include="Services\Abstractions\IMatchmakingService.cs" />
+    <Compile Include="Services\Abstractions\IProfileService.cs" />
+    <Compile Include="Services\Abstractions\ISocialService.cs" />
     <Compile Include="Services\Implementations\AuthenticationService.cs" />
+    <Compile Include="Services\Implementations\InvitationService.cs" />
+    <Compile Include="Services\Implementations\MatchmakingService.cs" />
+    <Compile Include="Services\Implementations\ProfileService.cs" />
+    <Compile Include="Services\SessionService.cs" />
+    <Compile Include="Services\Implementations\SocialService.cs" />
     <Compile Include="Utilities\Abstractions\IDialogService.cs" />
     <Compile Include="Utilities\Abstractions\INavigationService.cs" />
     <Compile Include="Utilities\Abstractions\IServiceExceptionHandler.cs" />
@@ -68,12 +77,15 @@
     <Compile Include="Utilities\Implementations\NavigationService.cs" />
     <Compile Include="Utilities\Implementations\ServiceExceptionHandler.cs" />
     <Compile Include="Validators\CreateAccountValidator.cs" />
+    <Compile Include="Validators\EditProfileValidator.cs" />
     <Compile Include="Validators\GuestJoinValidator.cs" />
     <Compile Include="Validators\LoginValidator.cs" />
     <Compile Include="Validators\PasswordRecoveryValidator.cs" />
     <Compile Include="ViewModel\Authentication\GuestJoinViewModel.cs" />
     <Compile Include="ViewModel\Authentication\LoginVIewModel.cs" />
     <Compile Include="ViewModel\Authentication\PasswordRecoveryViewModel.cs" />
+    <Compile Include="ViewModel\Main\ProfileViewModel.cs" />
+    <Compile Include="ViewModel\Main\SocialViewModel.cs" />
     <Compile Include="View\Authentication\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
     </Compile>
@@ -86,6 +98,12 @@
     <Compile Include="ViewModel\Authentication\CreateAccountViewModel.cs" />
     <Compile Include="View\Authentication\PasswordRecoveryPage.xaml.cs">
       <DependentUpon>PasswordRecoveryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\SocialPage.xaml.cs">
+      <DependentUpon>SocialPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -131,14 +149,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\Main\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Main\SocialPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\Game\" />
-    <Folder Include="ViewModel\Main\" />
     <Folder Include="ViewModel\Puzzle\" />
     <Folder Include="View\Dialogs\" />
     <Folder Include="View\Game\" />
-    <Folder Include="View\Main\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
