@@ -60,6 +60,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Services\Abstractions\IAuthenticationService.cs" />
+<<<<<<< HEAD
     <Compile Include="Services\Abstractions\IChatService.cs" />
     <Compile Include="Services\Abstractions\ICurrentLobbyService.cs" />
     <Compile Include="Services\Abstractions\ICurrentMatchService.cs" />
@@ -82,6 +83,18 @@
     <Compile Include="Services\JoinLobbyResultDto.cs" />
     <Compile Include="Services\PieceMovementDto.cs" />
     <Compile Include="Services\SessionService.cs" />
+=======
+    <Compile Include="Services\Abstractions\IInvitationService.cs" />
+    <Compile Include="Services\Abstractions\IMatchmakingService.cs" />
+    <Compile Include="Services\Abstractions\IProfileService.cs" />
+    <Compile Include="Services\Abstractions\ISocialService.cs" />
+    <Compile Include="Services\Implementations\AuthenticationService.cs" />
+    <Compile Include="Services\Implementations\InvitationService.cs" />
+    <Compile Include="Services\Implementations\MatchmakingService.cs" />
+    <Compile Include="Services\Implementations\ProfileService.cs" />
+    <Compile Include="Services\SessionService.cs" />
+    <Compile Include="Services\Implementations\SocialService.cs" />
+>>>>>>> 9219e669b5b058595b2e68b326d6746f0cb4da31
     <Compile Include="Utilities\Abstractions\IDialogService.cs" />
     <Compile Include="Utilities\Abstractions\INavigationService.cs" />
     <Compile Include="Utilities\Abstractions\IServiceExceptionHandler.cs" />
@@ -89,12 +102,17 @@
     <Compile Include="Utilities\Implementations\NavigationService.cs" />
     <Compile Include="Utilities\Implementations\ServiceExceptionHandler.cs" />
     <Compile Include="Validators\CreateAccountValidator.cs" />
+    <Compile Include="Validators\EditProfileValidator.cs" />
     <Compile Include="Validators\GuestJoinValidator.cs" />
     <Compile Include="Validators\LoginValidator.cs" />
     <Compile Include="Validators\PasswordRecoveryValidator.cs" />
     <Compile Include="ViewModel\Authentication\GuestJoinViewModel.cs" />
     <Compile Include="ViewModel\Authentication\LoginVIewModel.cs" />
     <Compile Include="ViewModel\Authentication\PasswordRecoveryViewModel.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="ViewModel\Main\ProfileViewModel.cs" />
+>>>>>>> 9219e669b5b058595b2e68b326d6746f0cb4da31
     <Compile Include="ViewModel\Main\SocialViewModel.cs" />
     <Compile Include="View\Authentication\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
@@ -109,6 +127,12 @@
     <Compile Include="View\Authentication\PasswordRecoveryPage.xaml.cs">
       <DependentUpon>PasswordRecoveryPage.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="View\Main\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+>>>>>>> 9219e669b5b058595b2e68b326d6746f0cb4da31
     <Compile Include="View\Main\SocialPage.xaml.cs">
       <DependentUpon>SocialPage.xaml</DependentUpon>
     </Compile>
@@ -156,10 +180,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+<<<<<<< HEAD
     <Page Include="View\Main\SocialPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+=======
+    <Page Include="View\Main\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Main\SocialPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+>>>>>>> 9219e669b5b058595b2e68b326d6746f0cb4da31
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\Game\" />
