@@ -60,7 +60,28 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Services\Abstractions\IAuthenticationService.cs" />
+    <Compile Include="Services\Abstractions\IChatService.cs" />
+    <Compile Include="Services\Abstractions\ICurrentLobbyService.cs" />
+    <Compile Include="Services\Abstractions\ICurrentMatchService.cs" />
+    <Compile Include="Services\Abstractions\IInvitationService.cs" />
+    <Compile Include="Services\Abstractions\IMatchmakingService.cs" />
+    <Compile Include="Services\Abstractions\IPuzzleService.cs" />
+    <Compile Include="Services\Abstractions\ISocialService.cs" />
+    <Compile Include="Services\Callbacks\ChatCallbackHandler.cs" />
+    <Compile Include="Services\Callbacks\MatchmakingCallbackHandler.cs" />
+    <Compile Include="Services\Callbacks\SocialCallbackHandler.cs" />
+    <Compile Include="Services\GuestJoinServiceResultDto.cs" />
     <Compile Include="Services\Implementations\AuthenticationService.cs" />
+    <Compile Include="Services\Implementations\ChatService.cs" />
+    <Compile Include="Services\Implementations\CurrentLobbyService.cs" />
+    <Compile Include="Services\Implementations\CurrentMatchService.cs" />
+    <Compile Include="Services\Implementations\InvitationService.cs" />
+    <Compile Include="Services\Implementations\MatchmakingService.cs" />
+    <Compile Include="Services\Implementations\PuzzleService.cs" />
+    <Compile Include="Services\Implementations\SocialService.cs" />
+    <Compile Include="Services\JoinLobbyResultDto.cs" />
+    <Compile Include="Services\PieceMovementDto.cs" />
+    <Compile Include="Services\SessionService.cs" />
     <Compile Include="Utilities\Abstractions\IDialogService.cs" />
     <Compile Include="Utilities\Abstractions\INavigationService.cs" />
     <Compile Include="Utilities\Abstractions\IServiceExceptionHandler.cs" />
@@ -74,6 +95,7 @@
     <Compile Include="ViewModel\Authentication\GuestJoinViewModel.cs" />
     <Compile Include="ViewModel\Authentication\LoginVIewModel.cs" />
     <Compile Include="ViewModel\Authentication\PasswordRecoveryViewModel.cs" />
+    <Compile Include="ViewModel\Main\SocialViewModel.cs" />
     <Compile Include="View\Authentication\CreateAccountPage.xaml.cs">
       <DependentUpon>CreateAccountPage.xaml</DependentUpon>
     </Compile>
@@ -86,6 +108,9 @@
     <Compile Include="ViewModel\Authentication\CreateAccountViewModel.cs" />
     <Compile Include="View\Authentication\PasswordRecoveryPage.xaml.cs">
       <DependentUpon>PasswordRecoveryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\SocialPage.xaml.cs">
+      <DependentUpon>SocialPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -131,14 +156,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\Main\SocialPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\Game\" />
-    <Folder Include="ViewModel\Main\" />
     <Folder Include="ViewModel\Puzzle\" />
     <Folder Include="View\Dialogs\" />
     <Folder Include="View\Game\" />
-    <Folder Include="View\Main\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
